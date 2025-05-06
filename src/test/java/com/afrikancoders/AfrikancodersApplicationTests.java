@@ -1,10 +1,10 @@
-package afrikancoders.com.example.demo;
+package com.afrikancoders;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DemoApplicationTests {
+class AfrikancodersApplicationTests {
 
 	@Test
 	void contextLoads() {
