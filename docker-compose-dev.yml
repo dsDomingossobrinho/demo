@@ -34,7 +34,10 @@ services:
       SPRING_DATASOURCE_USERNAME: afrikancoders
       SPRING_DATASOURCE_PASSWORD: app123
       SPRING_JPA_HIBERNATE_DDL_AUTO: update
-      MODE: dev
+      SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_ISSUER_URI: https://auth-utg.sintaxy.com/auth/realms/AfrikanCoders
+      KEYCLOAK_CLIENT_ID: backend
+      KEYCLOAK_CLIENT_SECRET: 3c7f61d1-2065-49dd-b0c5-1312e01a6741
+      MODE: local
 
 
 volumes:

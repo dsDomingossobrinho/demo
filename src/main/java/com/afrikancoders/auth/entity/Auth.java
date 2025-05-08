@@ -1,8 +1,14 @@
 package com.afrikancoders.auth.entity;
 
 import com.afrikancoders.model.AbstractModel;
+import com.afrikancoders.role.entity.Roles;
+import com.afrikancoders.state.Status;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import lombok.*;
@@ -24,14 +30,17 @@ public class Auth extends AbstractModel{
     @NotBlank(message = "Enter a password")
     private String password;
 
-    /*@ManyToOne
+    @Column(nullable = false)
+    private String username;
+
+    @ManyToOne
     @JoinColumn(name = "state_id")
     @JsonIgnoreProperties("auths")
-    private Status state;*/
+    private Status state;
 
-    /*@ManyToOne
+    @ManyToOne
     @JoinColumn(name = "role_id")
     @JsonIgnoreProperties("auths")
-    private Roles role;*/
+    private Roles role;
 
 }

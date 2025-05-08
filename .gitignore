@@ -31,3 +31,8 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Docker compose dev ###
+.docker-compose-dev
+
+.src\main\resources\application-local.properties
