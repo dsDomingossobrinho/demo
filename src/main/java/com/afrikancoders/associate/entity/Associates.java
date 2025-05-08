@@ -31,7 +31,7 @@ public class Associates extends AbstractModel{
     private Distributors distributor;
 
     @ManyToOne
-    @JoinColumn(name = "collaborat_id")
+    @JoinColumn(name = "collaborator_id")
     @JsonIgnoreProperties("associates")
     private Collaborators collaborator;
 

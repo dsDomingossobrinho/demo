@@ -17,4 +17,6 @@ public class Roles extends AbstractModel {
     @NotBlank(message = "Enter a role")
     private String role;
     
+    private String description;
+    
 }

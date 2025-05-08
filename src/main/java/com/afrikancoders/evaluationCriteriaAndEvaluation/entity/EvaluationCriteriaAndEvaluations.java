@@ -1,6 +1,5 @@
 package com.afrikancoders.evaluationCriteriaAndEvaluation.entity;
 
-import com.afrikancoders.distributor.entity.Distributors;
 import com.afrikancoders.evaluationCriteria.entity.EvaluationCriterias;
 import com.afrikancoders.evaluation.entity.Evaluations;
 import com.afrikancoders.model.AbstractModel;

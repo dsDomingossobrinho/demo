@@ -1,8 +1,7 @@
-package com.afrikancoders.evaluationCriteria.entity;
+package com.afrikancoders.userIdentificator.entity;
 
-
-import com.afrikancoders.company.entity.Companys;
 import com.afrikancoders.model.AbstractModel;
+import com.afrikancoders.typeUserIdentificator.entity.TypeUserIdentificators;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import jakarta.persistence.Column;
@@ -17,14 +16,14 @@ import lombok.Setter;
 @Getter
 @Setter
 @Builder
-public class EvaluationCriterias extends AbstractModel {
-    
-    
+public class UserIdentificators extends AbstractModel{
+
     @Column(nullable = false)
-    private Float value;
+    private Long user_id;
 
     @ManyToOne
-    @JoinColumn(name = "company_id")
-    @JsonIgnoreProperties("evaluationCriterias")
-    private Companys company;
+    @JoinColumn(name = "type_userIdentificator_id")
+    @JsonIgnoreProperties("userIdentificators")
+    private TypeUserIdentificators typeUserIdentificator;
+    
 }

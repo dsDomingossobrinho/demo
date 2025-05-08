@@ -1,13 +1,8 @@
 package com.afrikancoders.notification.entity;
 
-import java.lang.reflect.Type;
-
-import com.afrikancoders.collaborator.entity.Collaborators;
-import com.afrikancoders.company.entity.Companys;
-import com.afrikancoders.distributor.entity.Distributors;
-import com.afrikancoders.furnisher.entity.Furnishers;
 import com.afrikancoders.model.AbstractModel;
 import com.afrikancoders.typeNotification.entity.TypeNotifications;
+import com.afrikancoders.userIdentificator.entity.UserIdentificators;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import jakarta.persistence.Column;
@@ -26,27 +21,22 @@ import lombok.Setter;
 public class Notifications extends AbstractModel{
 
     @ManyToOne
-    @JoinColumn(name = "company_id")
+    @JoinColumn(name = "receiver_id")
     @JsonIgnoreProperties("notifications")
-    private Companys company;
+    private UserIdentificators receiver;
 
     @ManyToOne
-    @JoinColumn(name = "collaborator_id")
+    @JoinColumn(name = "sender_id")
     @JsonIgnoreProperties("notifications")
-    private Collaborators collaborator;
+    private UserIdentificators sender;
 
     @ManyToOne
-    @JoinColumn(name = "furnisher_id")
+    @JoinColumn(name = "destination_id")
     @JsonIgnoreProperties("notifications")
-    private Furnishers furnisher;
+    private UserIdentificators destination;
 
     @ManyToOne
-    @JoinColumn(name = "typeNotification_id")
-    @JsonIgnoreProperties("notifications")
-    private Distributors distributor;
-
-    @ManyToOne
-    @JoinColumn(name = "distributor_id")
+    @JoinColumn(name = "type_notification_id")
     @JsonIgnoreProperties("notifications")
     private TypeNotifications typeNotification;
 

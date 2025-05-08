@@ -1,4 +1,4 @@
-package com.afrikancoders.typeNotification.entity;
+package com.afrikancoders.typeUserIdentificator.entity;
 
 import com.afrikancoders.model.AbstractModel;
 
@@ -13,12 +13,10 @@ import lombok.Setter;
 @Getter
 @Setter
 @Builder
-public class TypeNotifications extends AbstractModel{
+public class TypeUserIdentificators extends AbstractModel{
 
     @Column(nullable = false)
-    @NotBlank(message = "Enter a Type Notification")
+    @NotBlank(message = "Enter a Type User Identificator")
     private String type;
-    
-    private String description;
     
 }

@@ -1,7 +1,7 @@
 package com.afrikancoders.company.entity;
 
-import com.afrikancoders.distributor.entity.Distributors;
 import com.afrikancoders.model.Users;
+import com.afrikancoders.userIdentificator.entity.UserIdentificators;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import jakarta.persistence.Entity;
@@ -18,8 +18,8 @@ import lombok.Setter;
 public class Companys extends Users {
 
     @ManyToOne
-    @JoinColumn(name = "distributor_id")
+    @JoinColumn(name = "user_identificator_id")
     @JsonIgnoreProperties("companys")
-    private Distributors distributor;
+    private UserIdentificators userIdentificator;
     
 }

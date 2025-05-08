@@ -4,7 +4,6 @@ import java.time.LocalDateTime;
 
 import com.afrikancoders.collaborator.entity.Collaborators;
 import com.afrikancoders.company.entity.Companys;
-import com.afrikancoders.distributor.entity.Distributors;
 import com.afrikancoders.model.AbstractModel;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 

@@ -18,8 +18,11 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 @EntityListeners(AuditingEntityListener.class)
 public class Users extends AbstractModel {
 
+    private String img;
+
     @Column(name = "phone", nullable = false, unique = true)
     private String phone;
+    
     @Column(name = "address", nullable = false)
     private String address;
 
