@@ -37,20 +37,5 @@ public class Collaborators extends Users {
     @JoinColumn(name = "distributor_id")
     @JsonIgnoreProperties("collaborators")
     private Distributors distributor;
-
-    @ManyToOne
-    @JoinColumn(name = "speciality_id")
-    @JsonIgnoreProperties("collaborators")
-    private Specialitys specialist;
-
-    @ManyToOne
-    @JoinColumn(name = "ability_id")
-    @JsonIgnoreProperties("collaborators")
-    private Abilitys ability;
-
-    @ManyToOne
-    @JoinColumn(name = "activityArea_id")
-    @JsonIgnoreProperties("collaborators")
-    private ActivityAreas activityArea;
     
 }
