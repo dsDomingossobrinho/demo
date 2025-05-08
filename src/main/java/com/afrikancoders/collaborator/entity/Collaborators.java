@@ -1,11 +1,16 @@
 package com.afrikancoders.collaborator.entity;
 
+import org.springframework.boot.autoconfigure.rsocket.RSocketProperties.Server.Spec;
+
+import com.afrikancoders.ability.entity.Abilitys;
+import com.afrikancoders.activityArea.entity.ActivityAreas;
 import com.afrikancoders.distributor.entity.Distributors;
 import com.afrikancoders.furnisher.entity.Furnishers;
 import com.afrikancoders.model.Users;
+import com.afrikancoders.specialty.entity.Specialitys;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-import jakarta.annotation.Nullable;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
@@ -32,5 +37,20 @@ public class Collaborators extends Users {
     @JoinColumn(name = "distributor_id")
     @JsonIgnoreProperties("collaborators")
     private Distributors distributor;
+
+    @ManyToOne
+    @JoinColumn(name = "speciality_id")
+    @JsonIgnoreProperties("collaborators")
+    private Specialitys specialist;
+
+    @ManyToOne
+    @JoinColumn(name = "ability_id")
+    @JsonIgnoreProperties("collaborators")
+    private Abilitys ability;
+
+    @ManyToOne
+    @JoinColumn(name = "activityArea_id")
+    @JsonIgnoreProperties("collaborators")
+    private ActivityAreas activityArea;
     
 }
