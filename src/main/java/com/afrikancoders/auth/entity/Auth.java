@@ -27,10 +27,6 @@ public class Auth extends AbstractModel{
     private String email;
 
     @Column(nullable = false)
-    @NotBlank(message = "Enter a password")
-    private String password;
-
-    @Column(nullable = false)
     private String username;
 
     @ManyToOne
