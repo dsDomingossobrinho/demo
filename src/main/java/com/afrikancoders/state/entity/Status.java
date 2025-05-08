@@ -1,4 +1,4 @@
-package com.afrikancoders.state;
+package com.afrikancoders.state.entity;
 
 import com.afrikancoders.model.AbstractModel;
 

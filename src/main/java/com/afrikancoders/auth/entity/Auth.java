@@ -2,7 +2,7 @@ package com.afrikancoders.auth.entity;
 
 import com.afrikancoders.model.AbstractModel;
 import com.afrikancoders.role.entity.Roles;
-import com.afrikancoders.state.Status;
+import com.afrikancoders.state.entity.Status;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import jakarta.persistence.Column;

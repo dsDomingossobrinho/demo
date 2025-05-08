@@ -1,6 +1,5 @@
 package com.afrikancoders.auth.service;
 
-import org.apache.catalina.connector.Response;
 import org.springframework.http.ResponseEntity;
 
 import com.afrikancoders.auth.dtos.KeycloackRegisterDto;
@@ -11,7 +10,6 @@ import com.afrikancoders.auth.entity.Auth;
 import com.afrikancoders.auth.response.LoginResponse;
 import com.afrikancoders.auth.response.LoginSwaggerResponse;
 
-import jakarta.persistence.criteria.CriteriaBuilder.In;
 
 public interface AuthService {
 
