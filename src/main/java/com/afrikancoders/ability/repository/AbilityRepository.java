@@ -21,7 +21,7 @@ public interface AbilityRepository extends JpaRepository<Abilitys, Long> {
 
     List<Abilitys> findAll();
 
-    @Query("SELECT new com.afrikancoders.ability.response.AbilityResponse(a.id, a.ability) FROM Abilitys a WHERE a.state_id = 1")
+    @Query("SELECT new com.afrikancoders.ability.response.AbilityResponse(a.id, a.ability) FROM Abilitys a WHERE a.state.id = 1")
     List<AbilityResponse> findAllResponse();
     
 }

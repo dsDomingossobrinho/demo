@@ -20,6 +20,6 @@ public interface SpecialityRepository extends JpaRepository<Specialitys, Long> {
 
     List<Specialitys> findAll();
 
-    @Query("SELECT new com.afrikancoders.Speciality.response.SpecialityResponse(a.id, a.Speciality) FROM Specialitys a WHERE a.state_id = 1")
+    @Query("SELECT new com.afrikancoders.speciality.response.SpecialityResponse(s.id, s.speciality) FROM Specialitys s WHERE s.state.id = 1")
     List<SpecialityResponse> findAllResponse();
 }

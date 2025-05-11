@@ -2,7 +2,7 @@ package com.afrikancoders.collaboratorSpeciality.entity;
 
 import com.afrikancoders.collaborator.entity.Collaborators;
 import com.afrikancoders.model.AbstractModel;
-import com.afrikancoders.specialty.entity.Specialitys;
+import com.afrikancoders.speciality.entity.Specialitys;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import jakarta.persistence.Entity;
