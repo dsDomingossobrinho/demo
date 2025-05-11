@@ -1,4 +1,4 @@
-package com.afrikancoders.specialty.entity;
+package com.afrikancoders.speciality.entity;
 
 import com.afrikancoders.model.AbstractModel;
 
