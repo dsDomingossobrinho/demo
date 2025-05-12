@@ -33,14 +33,14 @@ public class RolesController {
 
     private final RoleService roleService;
 
-    @Operation(description = "List All Roles", tags = "roles")
+    @Operation(description = "List All Roles", tags = "Roles")
     @ApiResponses(@ApiResponse(responseCode = "200", description = "Success"))
     @GetMapping("/list")
     public ResponseEntity<List<RoleResponse>> list(){
         return new ResponseEntity<>(roleService.getAllRoles(), HttpStatus.OK);
     }
 
-    @Operation(description = "List Roles By ID", tags = "roles")
+    @Operation(description = "List Roles By ID", tags = "Roles")
     @ApiResponses(@ApiResponse(responseCode = "200", description = "Success"))
     @GetMapping("/{id}")
     public ResponseEntity<RoleResponse> listbyid(@PathVariable long id){
@@ -48,21 +48,21 @@ public class RolesController {
     }
 
 
-    @Operation(description = "Save New Roles", tags = "roles")
+    @Operation(description = "Save New Roles", tags = "Roles")
     @ApiResponses(@ApiResponse(responseCode = "200", description = "Success"))
     @PostMapping("/save")
     public ResponseEntity<RoleResponse> save(@RequestBody RoleDto roles){
         return new ResponseEntity<>(roleService.saveRole(roles), HttpStatus.OK);
     }
 
-    @Operation(description = "Update Roles", tags = "roles")
+    @Operation(description = "Update Roles", tags = "Roles")
     @ApiResponses(@ApiResponse(responseCode = "200", description = "Success"))
     @PutMapping("/update/{id}")
     public ResponseEntity<RoleResponse> update(@PathVariable long id,@RequestBody RoleDto roles){
         return new ResponseEntity<>(roleService.updateRole(id, roles), HttpStatus.OK);
     }
 
-    @Operation(description = "Delete Roles", tags = "roles")
+    @Operation(description = "Delete Roles", tags = "Roles")
     @ApiResponses(@ApiResponse(responseCode = "200", description = "Success"))
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> delete(@PathVariable long id){

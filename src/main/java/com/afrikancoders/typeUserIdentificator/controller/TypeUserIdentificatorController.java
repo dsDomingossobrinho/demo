@@ -33,14 +33,14 @@ public class TypeUserIdentificatorController {
 
     private final TypeUserIdentificatorService typeUserIdentificatorService;
 
-    @Operation(description = "List All TypeUserIdentificators", tags = "typeUserIdentificators")
+    @Operation(description = "List All TypeUserIdentificators", tags = "TypeUserIdentificators")
     @ApiResponses(@ApiResponse(responseCode = "200", description = "Success"))
     @GetMapping("/list")
     public ResponseEntity<List<TypeUserIdentificatorResponse>> list(){
         return new ResponseEntity<>(typeUserIdentificatorService.getAllTypeUserIdentificators(), HttpStatus.OK);
     }
 
-    @Operation(description = "List TypeUserIdentificators By ID", tags = "typeUserIdentificators")
+    @Operation(description = "List TypeUserIdentificators By ID", tags = "TypeUserIdentificators")
     @ApiResponses(@ApiResponse(responseCode = "200", description = "Success"))
     @GetMapping("/{id}")
     public ResponseEntity<TypeUserIdentificatorResponse> listbyid(@PathVariable long id){
@@ -48,7 +48,7 @@ public class TypeUserIdentificatorController {
     }
 
 
-    @Operation(description = "Save New TypeUserIdentificators", tags = "typeUserIdentificators")
+    @Operation(description = "Save New TypeUserIdentificators", tags = "TypeUserIdentificators")
     @ApiResponses(@ApiResponse(responseCode = "200", description = "Success"))
     @PostMapping("/save")
     public ResponseEntity<TypeUserIdentificatorResponse> save(@RequestBody TypeUserIdentificatorDto typeUserIdentificator){
@@ -62,7 +62,7 @@ public class TypeUserIdentificatorController {
         return new ResponseEntity<>(typeUserIdentificatorService.updateTypeUserIdentificator(id, typeUserIdentificator), HttpStatus.OK);
     }
 
-    @Operation(description = "Delete TypeUserIdentificators", tags = "typeUserIdentificators")
+    @Operation(description = "Delete TypeUserIdentificators", tags = "TypeUserIdentificators")
     @ApiResponses(@ApiResponse(responseCode = "200", description = "Success"))
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> delete(@PathVariable long id){

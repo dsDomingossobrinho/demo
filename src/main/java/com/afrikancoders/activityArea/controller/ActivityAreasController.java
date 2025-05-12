@@ -33,14 +33,14 @@ public class ActivityAreasController {
 
     private final ActivityAreaService activityAreaService;
 
-    @Operation(description = "List All ActivityAreas", tags = "activityAreas")
+    @Operation(description = "List All ActivityAreas", tags = "ActivityAreas")
     @ApiResponses(@ApiResponse(responseCode = "200", description = "Success"))
     @GetMapping("/list")
     public ResponseEntity<List<ActivityAreaResponse>> list(){
         return new ResponseEntity<>(activityAreaService.getAllActivityAreas(), HttpStatus.OK);
     }
 
-    @Operation(description = "List ActivityAreas By ID", tags = "activityAreas")
+    @Operation(description = "List ActivityAreas By ID", tags = "ActivityAreas")
     @ApiResponses(@ApiResponse(responseCode = "200", description = "Success"))
     @GetMapping("/{id}")
     public ResponseEntity<ActivityAreaResponse> listbyid(@PathVariable long id){
@@ -48,21 +48,21 @@ public class ActivityAreasController {
     }
 
 
-    @Operation(description = "Save New ActivityAreas", tags = "activityAreas")
+    @Operation(description = "Save New ActivityAreas", tags = "ActivityAreas")
     @ApiResponses(@ApiResponse(responseCode = "200", description = "Success"))
     @PostMapping("/save")
     public ResponseEntity<ActivityAreaResponse> save(@RequestBody ActivityAreaDto activityAreas){
         return new ResponseEntity<>(activityAreaService.saveActivityArea(activityAreas), HttpStatus.OK);
     }
 
-    @Operation(description = "Update ActivityAreas", tags = "activityAreas")
+    @Operation(description = "Update ActivityAreas", tags = "ActivityAreas")
     @ApiResponses(@ApiResponse(responseCode = "200", description = "Success"))
     @PutMapping("/update/{id}")
     public ResponseEntity<ActivityAreaResponse> update(@PathVariable long id,@RequestBody ActivityAreaDto ActivityAreas){
         return new ResponseEntity<>(activityAreaService.updateActivityArea(id, ActivityAreas), HttpStatus.OK);
     }
 
-    @Operation(description = "Delete ActivityAreas", tags = "activityAreas")
+    @Operation(description = "Delete ActivityAreas", tags = "ActivityAreas")
     @ApiResponses(@ApiResponse(responseCode = "200", description = "Success"))
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> delete(@PathVariable long id){

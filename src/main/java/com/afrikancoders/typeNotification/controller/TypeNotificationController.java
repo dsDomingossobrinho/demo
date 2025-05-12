@@ -33,14 +33,14 @@ public class TypeNotificationController {
 
     private final TypeNotificationService TypeNotificationService;
 
-    @Operation(description = "List All TypeNotifications", tags = "typeNotifications")
+    @Operation(description = "List All TypeNotifications", tags = "TypeNotifications")
     @ApiResponses(@ApiResponse(responseCode = "200", description = "Success"))
     @GetMapping("/list")
     public ResponseEntity<List<TypeNotificationResponse>> list(){
         return new ResponseEntity<>(TypeNotificationService.getAllTypeNotifications(), HttpStatus.OK);
     }
 
-    @Operation(description = "List TypeNotifications By ID", tags = "typeNotifications")
+    @Operation(description = "List TypeNotifications By ID", tags = "TypeNotifications")
     @ApiResponses(@ApiResponse(responseCode = "200", description = "Success"))
     @GetMapping("/{id}")
     public ResponseEntity<TypeNotificationResponse> listbyid(@PathVariable long id){
@@ -48,7 +48,7 @@ public class TypeNotificationController {
     }
 
 
-    @Operation(description = "Save New TypeNotifications", tags = "typeNotifications")
+    @Operation(description = "Save New TypeNotifications", tags = "TypeNotifications")
     @ApiResponses(@ApiResponse(responseCode = "200", description = "Success"))
     @PostMapping("/save")
     public ResponseEntity<TypeNotificationResponse> save(@RequestBody TypeNotificationDto typeNotification){
@@ -62,7 +62,7 @@ public class TypeNotificationController {
         return new ResponseEntity<>(TypeNotificationService.updateTypeNotification(id, typeNotification), HttpStatus.OK);
     }
 
-    @Operation(description = "Delete TypeNotifications", tags = "typeNotifications")
+    @Operation(description = "Delete TypeNotifications", tags = "TypeNotifications")
     @ApiResponses(@ApiResponse(responseCode = "200", description = "Success"))
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> delete(@PathVariable long id){

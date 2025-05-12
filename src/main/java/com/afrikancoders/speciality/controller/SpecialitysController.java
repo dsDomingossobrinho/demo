@@ -33,14 +33,14 @@ public class SpecialitysController {
 
     private final SpecialityService specialityService;
 
-    @Operation(description = "List All Specialitys", tags = "specialitys")
+    @Operation(description = "List All Specialitys", tags = "Specialitys")
     @ApiResponses(@ApiResponse(responseCode = "200", description = "Success"))
     @GetMapping("/list")
     public ResponseEntity<List<SpecialityResponse>> list(){
         return new ResponseEntity<>(specialityService.getAllSpecialitys(), HttpStatus.OK);
     }
 
-    @Operation(description = "List Specialitys By ID", tags = "specialitys")
+    @Operation(description = "List Specialitys By ID", tags = "Specialitys")
     @ApiResponses(@ApiResponse(responseCode = "200", description = "Success"))
     @GetMapping("/{id}")
     public ResponseEntity<SpecialityResponse> listbyid(@PathVariable long id){
@@ -48,21 +48,21 @@ public class SpecialitysController {
     }
 
 
-    @Operation(description = "Save New Specialitys", tags = "specialitys")
+    @Operation(description = "Save New Specialitys", tags = "Specialitys")
     @ApiResponses(@ApiResponse(responseCode = "200", description = "Success"))
     @PostMapping("/save")
     public ResponseEntity<SpecialityResponse> save(@RequestBody SpecialityDto specialitys){
         return new ResponseEntity<>(specialityService.saveSpeciality(specialitys), HttpStatus.OK);
     }
 
-    @Operation(description = "Update Specialitys", tags = "specialitys")
+    @Operation(description = "Update Specialitys", tags = "Specialitys")
     @ApiResponses(@ApiResponse(responseCode = "200", description = "Success"))
     @PutMapping("/update/{id}")
     public ResponseEntity<SpecialityResponse> update(@PathVariable long id,@RequestBody SpecialityDto specialitys){
         return new ResponseEntity<>(specialityService.updateSpeciality(id, specialitys), HttpStatus.OK);
     }
 
-    @Operation(description = "Delete Specialitys", tags = "specialitys")
+    @Operation(description = "Delete Specialitys", tags = "Specialitys")
     @ApiResponses(@ApiResponse(responseCode = "200", description = "Success"))
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> delete(@PathVariable long id){

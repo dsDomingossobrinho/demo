@@ -33,14 +33,14 @@ public class AbilityController {
 
     private final AbilityService abilityService;
 
-    @Operation(description = "List All Abilitys", tags = "abilitys")
+    @Operation(description = "List All Abilitys", tags = "Abilitys")
     @ApiResponses(@ApiResponse(responseCode = "200", description = "Success"))
     @GetMapping("/list")
     public ResponseEntity<List<AbilityResponse>> list(){
         return new ResponseEntity<>(abilityService.getAllAbilitys(), HttpStatus.OK);
     }
 
-    @Operation(description = "List Abilitys By ID", tags = "abilitys")
+    @Operation(description = "List Abilitys By ID", tags = "Abilitys")
     @ApiResponses(@ApiResponse(responseCode = "200", description = "Success"))
     @GetMapping("/{id}")
     public ResponseEntity<AbilityResponse> listbyid(@PathVariable long id){
@@ -48,7 +48,7 @@ public class AbilityController {
     }
 
 
-    @Operation(description = "Save New Abilitys", tags = "abilitys")
+    @Operation(description = "Save New Abilitys", tags = "Abilitys")
     @ApiResponses(@ApiResponse(responseCode = "200", description = "Success"))
     @PostMapping("/save")
     public ResponseEntity<AbilityResponse> save(@RequestBody AbilityDto Ability){
@@ -62,7 +62,7 @@ public class AbilityController {
         return new ResponseEntity<>(abilityService.updateAbility(id, Ability), HttpStatus.OK);
     }
 
-    @Operation(description = "Delete Abilitys", tags = "abilitys")
+    @Operation(description = "Delete Abilitys", tags = "Abilitys")
     @ApiResponses(@ApiResponse(responseCode = "200", description = "Success"))
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> delete(@PathVariable long id){

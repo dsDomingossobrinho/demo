@@ -32,14 +32,14 @@ public class StatusController {
 
     private final StatusService statusService;
 
-    @Operation(description = "List All Status", tags = "status")
+    @Operation(description = "List All Status", tags = "Status")
     @ApiResponses(@ApiResponse(responseCode = "200", description = "Success"))
     @GetMapping("/list")
     public ResponseEntity<List<StateResponse>> list(){
         return new ResponseEntity<>(statusService.getAllStates(), HttpStatus.OK);
     }
 
-    @Operation(description = "List Status By ID", tags = "status")
+    @Operation(description = "List Status By ID", tags = "Status")
     @ApiResponses(@ApiResponse(responseCode = "200", description = "Success"))
     @GetMapping("/{id}")
     public ResponseEntity<StateResponse> listbyid(@PathVariable long id){
@@ -47,21 +47,21 @@ public class StatusController {
     }
 
 
-    @Operation(description = "Save New Status", tags = "status")
+    @Operation(description = "Save New Status", tags = "Status")
     @ApiResponses(@ApiResponse(responseCode = "200", description = "Success"))
     @PostMapping("/save")
     public ResponseEntity<StateResponse> save(@RequestBody StateDto state){
         return new ResponseEntity<>(statusService.saveState(state), HttpStatus.OK);
     }
 
-    @Operation(description = "Update Status", tags = "status")
+    @Operation(description = "Update Status", tags = "Status")
     @ApiResponses(@ApiResponse(responseCode = "200", description = "Success"))
     @PutMapping("/update/{id}")
     public ResponseEntity<StateResponse> update(@PathVariable long id,@RequestBody StateDto state){
         return new ResponseEntity<>(statusService.updateState(id, state), HttpStatus.OK);
     }
 
-    /*@Operation(description = "Update Status", tags = "status")
+    /*@Operation(description = "Update Status", tags = "Status")
     @ApiResponses(@ApiResponse(responseCode = "200", description = "Success"))
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> delete(@PathVariable long id){
