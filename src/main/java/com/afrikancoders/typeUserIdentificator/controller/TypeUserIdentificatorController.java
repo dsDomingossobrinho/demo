@@ -55,7 +55,7 @@ public class TypeUserIdentificatorController {
         return new ResponseEntity<>(typeUserIdentificatorService.saveTypeUserIdentificator(typeUserIdentificator), HttpStatus.OK);
     }
 
-    @Operation(description = "Update TypeUserIdentificators", tags = "typeUserIdentificator")
+    @Operation(description = "Update TypeUserIdentificators", tags = "TypeUserIdentificators")
     @ApiResponses(@ApiResponse(responseCode = "200", description = "Success"))
     @PutMapping("/update/{id}")
     public ResponseEntity<TypeUserIdentificatorResponse> update(@PathVariable long id,@RequestBody TypeUserIdentificatorDto typeUserIdentificator){

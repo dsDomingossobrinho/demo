@@ -55,7 +55,7 @@ public class AbilityController {
         return new ResponseEntity<>(abilityService.saveAbility(Ability), HttpStatus.OK);
     }
 
-    @Operation(description = "Update Abilitys", tags = "ability")
+    @Operation(description = "Update Abilitys", tags = "Abilitys")
     @ApiResponses(@ApiResponse(responseCode = "200", description = "Success"))
     @PutMapping("/update/{id}")
     public ResponseEntity<AbilityResponse> update(@PathVariable long id,@RequestBody AbilityDto Ability){

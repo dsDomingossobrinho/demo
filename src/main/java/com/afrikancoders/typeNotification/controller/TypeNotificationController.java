@@ -55,7 +55,7 @@ public class TypeNotificationController {
         return new ResponseEntity<>(TypeNotificationService.saveTypeNotification(typeNotification), HttpStatus.OK);
     }
 
-    @Operation(description = "Update TypeNotifications", tags = "typeNotification")
+    @Operation(description = "Update TypeNotifications", tags = "TypeNotifications")
     @ApiResponses(@ApiResponse(responseCode = "200", description = "Success"))
     @PutMapping("/update/{id}")
     public ResponseEntity<TypeNotificationResponse> update(@PathVariable long id,@RequestBody TypeNotificationDto typeNotification){
